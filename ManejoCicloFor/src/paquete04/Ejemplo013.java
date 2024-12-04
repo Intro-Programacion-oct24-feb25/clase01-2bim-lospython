@@ -6,30 +6,28 @@
 package paquete04;
 
 import paquete01.*;
+import java.util.Scanner;
 
 /**
  *
  * @author reroes
  */
-public class Ejemplo01 {
+public class Ejemplo013 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String cadenaFinal = "";
-        for (int i = 1; i <= 10; i++) {
-            
-            cadenaFinal = String.format("%s%d", 
-                    cadenaFinal,i);
-        }
         
-        for (int i = 1; i < 11; i++) {
-            cadenaFinal = String.format("%s%d", 
-                    cadenaFinal,i);
-        }
+        int limite;
+        Scanner entrada = new Scanner(System.in);
         
-        System.out.printf("%s\n", cadenaFinal);
+        System.out.println("Ingrese el límite para ciclo");
+        limite = entrada.nextInt();
+        
+        for (int i = 0; i < limite; i++) {
+            System.out.printf("%d\n", i);
+        }
 
     }
 
