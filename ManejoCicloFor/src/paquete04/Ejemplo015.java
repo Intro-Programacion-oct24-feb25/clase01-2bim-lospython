@@ -26,6 +26,7 @@ public class Ejemplo015 {
         int factor_2 = 1;
         int limite;
         int limite_tabla;
+        String cadena = "";
         
         System.out.println("Ingrese el numero de tablas");
         limite = entrada.nextInt();
@@ -34,13 +35,15 @@ public class Ejemplo015 {
         
         while (factor_1 <= limite){
             while (factor_2 <= limite_tabla){
-                System.out.println(factor_1 + "*" + factor_2 + "=" + factor_1*factor_2);
+                cadena = String.format("%s\n%d * %d = %d", cadena, factor_1, factor_2, factor_1 *factor_2);
+                //System.out.println(factor_1 + "*" + factor_2 + "=" + factor_1*factor_2);
                 factor_2 += 1;
             }
             factor_2 = 1;
             factor_1 += 1;
             
         }
+        System.out.println(cadena);
         
         }
         
