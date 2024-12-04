@@ -34,8 +34,11 @@ public class Ejemplo015 {
         
         while (factor_1 <= limite){
             while (factor_2 <= limite_tabla){
-                System.out.println();
+                System.out.println(factor_1 + "*" + factor_2 + "=" + factor_1*factor_2);
+                factor_2 += 1;
             }
+            factor_2 = 1;
+            factor_1 += 1;
             
         }
         
