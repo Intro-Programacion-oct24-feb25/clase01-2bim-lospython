@@ -11,26 +11,18 @@ import paquete01.*;
  *
  * @author reroes
  */
-public class Ejemplo01 {
+public class Ejemplo011 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String cadenaFinal = "";
-        for (int i = 1; i <= 10; i++) {
-            
-            cadenaFinal = String.format("%s%d", 
-                    cadenaFinal,i);
+        
+        for (int i = 10; i >= 0; i--) {
+            System.out.printf("%d\n", i);
         }
         
-        for (int i = 1; i < 11; i++) {
-            cadenaFinal = String.format("%s%d", 
-                    cadenaFinal,i);
-        }
         
-        System.out.printf("%s\n", cadenaFinal);
-
     }
-
+    
 }
