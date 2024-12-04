@@ -16,24 +16,35 @@ public class Ejemplo06 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
-        int tabla;
-        int operacion;
-        String cadenaFinal = "";
-        System.out.println("Ingrese la tabla a generar");
-        tabla = entrada.nextInt(); // 7
+   
         
-        for (int contador = 5; contador <= 12; contador++) {
-            operacion = tabla * contador; // 7*5 = 35 // 7*6 = 42
-            // System.out.printf("%d x %d = %d\n", tabla, contador, operacion);
-            cadenaFinal = String.format("%s%d x %d = %d\n", 
-                    cadenaFinal, 
-                    tabla, 
-                    contador, 
-                    operacion);
+        int factor_1 = 1;
+        int factor_2 = 1;
+        int limite;
+        int limite_tabla;
+        String cadena = "";
+        
+        System.out.println("Ingrese el numero de tablas");
+        limite = entrada.nextInt();
+        System.out.println("Ingrese el limite de las tablas");
+        limite_tabla = entrada.nextInt();
+        
+        while (factor_1 <= limite){
+            while (factor_2 <= limite_tabla){
+                cadena = String.format("%s\n%d * %d = %d", cadena, factor_1, factor_2, factor_1 *factor_2);
+                //System.out.println(factor_1 + "*" + factor_2 + "=" + factor_1*factor_2);
+                factor_2 += 1;
+            }
+            factor_2 = 1;
+            factor_1 += 1;
             
         }
+        System.out.println(cadena);
         
-        System.out.printf("%s\n", cadenaFinal);
+        }
         
+        
+    }
+    
     }
 }
